@@ -1,0 +1,684 @@
+body { font-family: "Noto Sans", sans-serif; }
+.link-block a { margin-top: 5px; margin-bottom: 5px; }
+.teaser .hero-body { padding-top: 0; padding-bottom: 3rem; }
+.teaser, .publication-title, .publication-authors { font-family: "Google Sans", sans-serif; }
+.publication-authors a { color: hsl(204, 86%, 53%) !important; }
+.publication-authors a:hover { text-decoration: underline; }
+.author-block { display: inline-block; }
+@font-face {
+  font-family: "Google Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/google-sans.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Noto Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/noto-sans.ttf") format("truetype");
+  font-display: swap;
+}
+:root {
+  --background: #fff;
+  --foreground: #4a4a4a;
+  --primary: #363636;
+  --primary-foreground: #fff;
+  --border: #dbdbdb;
+  --accent: #87cefa;
+  --muted: #f5f5f5;
+}
+.section {
+  margin: 0;
+  padding: 1.2rem;
+}
+.expand-button {
+  background-color: #87cefa;
+  color: #fff;
+  border: none;
+  font-size: 1.2rem;
+  padding: 12px 24px;
+}
+.expand-button:hover,
+.expand-button:focus {
+  background-color: #79c5f4;
+  color: #fff;
+}
+.publication-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+.publication-video-container video {
+  width: 100%;
+  display: block;
+}
+.video-caption {
+  text-align: left;
+}
+.paper-image {
+  width: 100%;
+  height: auto;
+}
+#Hardware .paper-image {
+  width: 100%;
+}
+.publication-authors .author-name {
+  color: hsl(204, 86%, 53%);
+}
+.table-scroll {
+  width: 100%;
+  overflow-x: auto;
+}
+.table-scroll table {
+  width: 100%;
+  font-size: 14px;
+}
+.table-scroll th,
+.table-scroll td {
+  padding: 0.65em 0.75em;
+  white-space: nowrap;
+  text-align: center;
+  border-bottom: 1px solid #dbdbdb;
+}
+.table-scroll th:first-child,
+.table-scroll td:first-child {
+  text-align: left;
+}
+.table-scroll .ours {
+  font-weight: bold;
+  background: #eff8fe;
+}
+.supplementary-note {
+  font-size: 14px;
+  color: #6b6b6b;
+}
+figure {
+  margin: 0;
+}
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid #209cee;
+  outline-offset: 3px;
+}
+#teaser {
+  display: block;
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .expand-button {
+    height: auto;
+    white-space: normal;
+    max-width: 100%;
+  }
+  .publication-title {
+    overflow-wrap: break-word;
+  }
+  .section {
+    padding: 1.2rem;
+  }
+  .publication-authors {
+    padding: 0 0.25rem;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+.bibtex-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.bibtex-heading .title {
+  margin: 0;
+}
+.bibtex-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 14px;
+}
+
+.publication-links .link-block button {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  justify-content: center;
+  text-align: center;
+}
+
+.hardware-layout {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+.hardware-description {
+  min-width: 0;
+}
+.hardware-description .content {
+  line-height: 1.8;
+}
+.hardware-description .column {
+  padding: 0;
+}
+.hardware-description .paper-image {
+  display: block;
+}
+.hardware-highlight {
+  color: #e98145;
+}
+.hardware-assembly {
+  min-width: 0;
+}
+.hardware-assembly video {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.hardware-caption {
+  margin-top: 0.5rem;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .hardware-layout {
+    grid-template-columns: 1fr;
+  }
+  .hardware-assembly {
+    width: 100%;
+    max-width: 480px;
+    margin: auto;
+  }
+}
+
+.visualization-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+.visualization-task video {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.visualization-task p {
+  margin-top: 0.65rem;
+}
+@media (max-width: 768px) {
+  .visualization-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.view-labels {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  align-items: center;
+  margin-bottom: 4px;
+  font-size: 14px;
+  line-height: 1.3;
+  text-align: center;
+}
+.view-labels span {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+#Learning {
+  padding-top: 3rem;
+}
+
+#quantitative-main > .table-scroll:first-of-type tbody tr:nth-child(-n + 4) td {
+  border-bottom: none;
+}
+
+#quantitative-main > .table-scroll:first-of-type tbody tr:nth-child(6) td {
+  border-bottom: none;
+}
+
+.qualitative-task {
+  margin-bottom: 2rem;
+  text-align: left;
+}
+.qualitative-task .title {
+  margin-bottom: 0.5rem;
+}
+.qualitative-rate {
+  margin-bottom: 1rem;
+}
+.qualitative-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+.qualitative-grid video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: contain;
+  background: #f5f5f5;
+}
+.qualitative-caption {
+  text-align: center;
+  margin-top: 0.5rem;
+}
+@media (max-width: 768px) {
+  .qualitative-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+#quantitative-main > .table-scroll:first-of-type {
+  max-width: 860px;
+  margin-inline: auto;
+}
+#quantitative-main > .table-scroll:first-of-type th,
+#quantitative-main > .table-scroll:first-of-type td {
+  padding: 0.4em 0.55em;
+  line-height: 1.35;
+}
+
+.camera-ablation-table {
+  max-width: 600px;
+  margin: 1rem auto;
+}
+.camera-ablation-table th,
+.camera-ablation-table td {
+  padding: 0.4em 0.55em;
+  line-height: 1.35;
+}
+
+#quantitative-main > .table-scroll:first-of-type thead th {
+  border-top: 1px solid #777;
+}
+
+.camera-ablation-table thead th {
+  border-top: 1px solid #777;
+}
+
+.generalization-table {
+  max-width: 680px;
+  margin: 1rem auto;
+}
+.generalization-table th,
+.generalization-table td {
+  padding: 0.3em 0.45em;
+  line-height: 1.3;
+}
+
+#Quantitative .paper-image[src="static/images/generalization-scenarios.webp"] {
+  width: 80%;
+  height: auto;
+}
+@media (max-width: 768px) {
+  #Quantitative .paper-image[src="static/images/generalization-scenarios.webp"] {
+    width: 100%;
+  }
+}
+
+.qualitative-task-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+.qualitative-task-grid .qualitative-task {
+  min-width: 0;
+  margin-bottom: 0.5rem;
+}
+.qualitative-task-grid .qualitative-task .title {
+  font-size: 1.15rem;
+  line-height: 1.4;
+}
+.qualitative-task-grid .qualitative-grid {
+  gap: 0.5rem;
+}
+@media (max-width: 768px) {
+  .qualitative-task-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.qualitative-grid video {
+  aspect-ratio: auto;
+  height: auto;
+  background: transparent;
+}
+
+.failure-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+.failure-grid video {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.failure-grid p {
+  margin-top: 0.5rem;
+}
+@media (max-width: 768px) {
+  .failure-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+#FailureCases .supplementary-note {
+  text-align: right;
+  margin-top: 1rem;
+}
+
+#Qualitative .supplementary-note {
+  text-align: right;
+  margin-top: 1rem;
+}
+
+/* Shared typography and section rhythm. */
+body {
+  font-size: 1rem;
+  line-height: 1.65;
+}
+.publication-title.title {
+  font-size: 2.5rem;
+  line-height: 1.18;
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+  text-wrap: balance;
+}
+.publication-conference {
+  font-size: 1.25rem;
+  line-height: 1.4;
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+}
+.publication-authors {
+  line-height: 1.7;
+}
+.publication-authors.publication-affiliations {
+  font-size: 1rem;
+}
+.section {
+  padding-block: 2rem;
+}
+.section-title.title,
+#Acknowledgement .section-title.title {
+  font-size: 1.75rem;
+  line-height: 1.25;
+  font-weight: 600;
+  text-align: center;
+  margin: 0 0 1.5rem;
+  text-wrap: balance;
+}
+.section-subtitle {
+  font-size: 1.0625rem;
+  line-height: 1.55;
+  font-weight: 400;
+  color: #555;
+  margin: -0.65rem 0 1.5rem;
+  text-wrap: balance;
+}
+.content p,
+.video-caption {
+  line-height: 1.65;
+}
+.teaser-caption.subtitle {
+  font-size: 1.125rem;
+  line-height: 1.5;
+  margin-top: 0.8rem;
+  text-wrap: balance;
+}
+#userStudySection h3.title {
+  font-size: 1.25rem;
+  line-height: 1.4;
+  margin-top: 1.75rem;
+  margin-bottom: 0.8rem;
+}
+.generalization-table h4.title {
+  font-size: 1.125rem;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+}
+.qualitative-task-grid {
+  row-gap: 2rem;
+}
+.qualitative-task-grid .qualitative-task .title {
+  font-size: 1.125rem;
+  line-height: 1.45;
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+}
+.qualitative-rate {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: #666;
+  margin-bottom: 0.85rem;
+}
+.qualitative-caption,
+.hardware-caption,
+.visualization-task p,
+.failure-grid p {
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+.supplementary-note {
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+.expand-button {
+  font-size: 1rem;
+  line-height: 1.5;
+  height: auto;
+}
+.bibtex-heading {
+  position: relative;
+  justify-content: center;
+  min-height: 2.5rem;
+  margin-bottom: 1.25rem;
+  padding-inline: 3rem;
+}
+.bibtex-heading .section-title.title {
+  margin: 0;
+}
+.bibtex-actions {
+  position: absolute;
+  right: 0;
+}
+#BibTeX pre {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  text-align: left;
+}
+#Acknowledgement .content p {
+  font-size: 1rem;
+  line-height: 1.7;
+}
+@media (max-width: 768px) {
+  .publication-title.title {
+    font-size: 2rem;
+  }
+  .publication-conference {
+    font-size: 1.125rem;
+  }
+  .section-title.title,
+  #Acknowledgement .section-title.title {
+    font-size: 1.5rem;
+  }
+  .section {
+    padding-block: 1.75rem;
+  }
+  .section-subtitle {
+    font-size: 1rem;
+  }
+  .bibtex-actions [role="status"] {
+    position: absolute;
+    right: 0;
+    top: 100%;
+    white-space: nowrap;
+  }
+}
+
+#Acknowledgement .section-title.title {
+  text-align: left;
+}
+
+#BibTeX .bibtex-heading {
+  justify-content: flex-start;
+  padding-left: 0;
+}
+#BibTeX .section-title.title {
+  text-align: left;
+}
+
+img#teaser {
+  height: auto;
+}
+
+#Experiment {
+  padding-bottom: 0.75rem;
+}
+#Quantitative {
+  padding-top: 0.75rem;
+}
+#Quantitative > .container > .columns > .column > .section-title {
+  margin-bottom: 1rem;
+}
+
+.expand-button[aria-controls="fingertip-visualization"] {
+  background-color: #e98145;
+  color: #fff;
+}
+.expand-button[aria-controls="fingertip-visualization"]:hover,
+.expand-button[aria-controls="fingertip-visualization"]:focus {
+  background-color: #d76b2f;
+  color: #fff;
+}
+
+.expand-button[aria-controls="userStudySection"] {
+  background-color: #e98145;
+  color: #fff;
+}
+.expand-button[aria-controls="userStudySection"]:hover,
+.expand-button[aria-controls="userStudySection"]:focus {
+  background-color: #d76b2f;
+  color: #fff;
+}
+
+.ablation-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+  align-items: start;
+  text-align: left;
+}
+.ablation-grid > div {
+  min-width: 0;
+}
+.ablation-grid .camera-ablation-table {
+  max-width: none;
+}
+.encoder-ablation-table {
+  margin: 1rem 0;
+}
+.encoder-ablation-table th,
+.encoder-ablation-table td {
+  padding: 0.4em 0.4em;
+  line-height: 1.35;
+}
+.encoder-ablation-table thead th {
+  border-top: 1px solid #777;
+}
+.ablation-grid th:first-child,
+.ablation-grid td:first-child {
+  white-space: normal;
+}
+@media (max-width: 768px) {
+  .ablation-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 769px) {
+  .ablation-grid {
+    align-items: stretch;
+  }
+  .ablation-grid > div {
+    display: grid;
+    grid-template-rows: auto 1fr;
+  }
+  .ablation-grid > div > .content {
+    min-height: 8rem;
+    margin-bottom: 0;
+  }
+  .ablation-grid .camera-ablation-table,
+  .ablation-grid .encoder-ablation-table {
+    margin: 1rem 0;
+    min-height: 10rem;
+  }
+  .ablation-grid .table-scroll,
+  .ablation-grid table {
+    height: 100%;
+  }
+}
+
+.generalization-table thead th {
+  border-top: 1px solid #777;
+}
+
+.encoder-ablation-table th,
+.encoder-ablation-table td {
+  padding: 0.15em 0.4em;
+  line-height: 1.2;
+}
+
+/* Consistent outer horizontal rules for every data table. */
+.table-scroll table {
+  border-top: 1px solid #777;
+  border-bottom: 1px solid #777;
+  border-collapse: collapse;
+}
+.table-scroll thead tr:first-child th {
+  border-top: 1px solid #777;
+}
+.table-scroll tbody tr:last-child td {
+  border-bottom: 1px solid #777;
+}
+
+.failure-analysis {
+  margin-top: 1.25rem;
+  text-align: left;
+}
+
+.results-figure-caption {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #6b6b6b;
+  text-align: left;
+  margin-top: 0.5rem;
+}
+
+.encoder-ablation-table .ours {
+  font-weight: normal;
+}
+
+#FailureCases .failure-speed-note {
+  margin: 0 0 0.5rem;
+  text-align: right;
+}
+
+#FailureCases .section-title.title {
+  margin-bottom: 0.5rem;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+.content .runtime-table th:not(:first-child),
+.content .runtime-table td:not(:first-child) {
+  text-align: center;
+}
