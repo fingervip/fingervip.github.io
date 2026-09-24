@@ -622,32 +622,11 @@
               </div>
               <div class="content has-text-left">
                 <h3 class="title is-4">Runtime</h3>
-                <div class="table-scroll camera-ablation-table runtime-table">
-                  <table aria-label="Runtime comparison">
-                    <thead>
-                      <tr>
-                        <th scope="col">Method</th>
-                        <th scope="col">FPS ↑</th>
-                        <th scope="col">Data acquisition<br />(ms/frame) ↓</th>
-                        <th scope="col">Policy computation<br />(GFLOPs) ↓</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>Third-view + wrist</td>
-                        <td>13.2</td>
-                        <td>34.4</td>
-                        <td>79.00</td>
-                      </tr>
-                      <tr class="ours">
-                        <td>FingerViP (ours)</td>
-                        <td>10.2</td>
-                        <td>35.2</td>
-                        <td>215.01</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
+                <p>
+                  FingerViP runs at 10.2 FPS, compared with 13.2 FPS for the third-view and
+                  wrist-camera baseline. Data acquisition takes 35.2 vs. 34.4 ms per frame,
+                  and policy computation requires 215.01 vs. 79.00 GFLOPs, respectively.
+                </p>
                 <h3 class="title is-4">Generalization</h3>
               </div>
               <div class="content has-text-centered">
@@ -1066,18 +1045,19 @@
       <div class="container is-max-desktop content">
         <h2 class="title section-title">Acknowledgement</h2>
         <p>
-          We thank the
-          <a href="https://guoxinfang.github.io/" target="_blank" rel="noopener noreferrer">CRML</a>
-          for generously sharing the UR5e robotic arm used in all our experiments, and Dezhao Guo
-          for his help. We are also grateful to Professor
+          This work was supported in part by the Multi-Scale Medical Robotics Centre, AIR@InnoHK.
+          We would like to thank
+          <a href="https://guoxinfang.github.io/" target="_blank" rel="noopener noreferrer">CRML@CUHK</a>
+          for generously providing the UR5e robotic arm, and Dezhao Guo for his assistance.
+          We are also grateful to Professor
           <a
             href="https://sites.google.com/view/surgicalroboticslab/people/cheng-shing-shin?authuser=0"
             target="_blank"
             rel="noopener noreferrer"
             >Shing Shin Cheng</a
           >
-          for making a robotic arm available for testing, and to Yanlin Chen and Wesley for their
-          helpful advice and insightful discussions on the hardware design.
+          for his support with a robotic arm for testing. We also thank Yanlin Chen, Jianghua Chen,
+          Pui Hin NG, Ziliang Feng, and Yongjun Yan for their helpful feedback and fruitful discussions.
         </p>
       </div>
     </section>
